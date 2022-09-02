@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>420</x>
-      <y>660</y>
+      <x>480</x>
+      <y>555</y>
       <w>225</w>
       <h>165</h>
     </coordinates>
@@ -21,8 +21,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>690</x>
-      <y>660</y>
+      <x>750</x>
+      <y>555</y>
       <w>300</w>
       <h>300</h>
     </coordinates>
@@ -44,8 +44,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1620</x>
-      <y>1590</y>
+      <x>330</x>
+      <y>750</y>
       <w>375</w>
       <h>150</h>
     </coordinates>
@@ -59,12 +59,18 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>1110</y>
+      <x>90</x>
+      <y>1005</y>
       <w>285</w>
-      <h>75</h>
+      <h>195</h>
     </coordinates>
     <panel_attributes>Income
+-
+- id : Integer
+- userId : String
+- date : String
+- item : String
+- amount : Integer
 -
 + Income ()</panel_attributes>
     <additional_attributes/>
@@ -72,22 +78,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>990</x>
-      <y>1110</y>
-      <w>330</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>IncomeManager
--
-- incomes : vector&lt;Income&gt;
-- incomeFile: IncomeFile</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1830</x>
-      <y>1110</y>
+      <x>1890</x>
+      <y>1005</y>
       <w>435</w>
       <h>120</h>
     </coordinates>
@@ -101,12 +93,18 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>315</x>
-      <y>1110</y>
+      <x>420</x>
+      <y>1005</y>
       <w>285</w>
-      <h>75</h>
+      <h>195</h>
     </coordinates>
     <panel_attributes>Expense
+-
+- id : Integer
+- userId : String
+- date : String
+- item : String
+- amount : Integer
 -
 + Expense ()</panel_attributes>
     <additional_attributes/>
@@ -114,22 +112,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>615</x>
-      <y>1110</y>
-      <w>360</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>ExpenseManager
--
-- expenses : vector&lt;Expense&gt;
-- expenseFile : ExpenseFile</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1350</x>
-      <y>1110</y>
+      <x>1410</x>
+      <y>1005</y>
       <w>450</w>
       <h>120</h>
     </coordinates>
@@ -143,8 +127,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1680</x>
-      <y>1350</y>
+      <x>1740</x>
+      <y>1245</y>
       <w>255</w>
       <h>135</h>
     </coordinates>
@@ -159,8 +143,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1725</x>
-      <y>1215</y>
+      <x>1785</x>
+      <y>1110</y>
       <w>45</w>
       <h>165</h>
     </coordinates>
@@ -170,8 +154,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1890</x>
-      <y>1215</y>
+      <x>1950</x>
+      <y>1110</y>
       <w>45</w>
       <h>165</h>
     </coordinates>
@@ -179,68 +163,20 @@
     <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1800</x>
-      <y>1470</y>
-      <w>45</w>
-      <h>150</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>180</x>
-      <y>1290</y>
-      <w>255</w>
-      <h>195</h>
-    </coordinates>
-    <panel_attributes>BudgetLine
--
-- id : Integer
-- userId : String
-- date : String
-- item : String
-- amount : Integer
--
-+ BudgetLine ()</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>360</x>
-      <y>1170</y>
-      <w>45</w>
-      <h>150</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>225</x>
-      <y>1170</y>
-      <w>45</w>
-      <h>150</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>810</x>
-      <y>1320</y>
+      <x>825</x>
+      <y>1005</y>
       <w>345</w>
-      <h>225</h>
+      <h>315</h>
     </coordinates>
-    <panel_attributes>BudgetLineManager
+    <panel_attributes>BudgetManager
 -
 - LOGGED_USER_ID : Integer
+- expenses : vector&lt;Expense&gt;
+- incomes : vector&lt;Income&gt;
+- expenseFile : ExpenseFile
+- incomeFile: IncomeFile
 -
 - inputNewData () : BudgetLine
 - sumOfAmount() : Integer
@@ -251,32 +187,10 @@
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1035</x>
-      <y>1185</y>
-      <w>45</w>
-      <h>165</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>885</x>
-      <y>1185</y>
-      <w>45</w>
-      <h>165</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1035</x>
-      <y>660</y>
+      <x>1095</x>
+      <y>555</y>
       <w>330</w>
       <h>195</h>
     </coordinates>
@@ -293,8 +207,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1410</x>
-      <y>660</y>
+      <x>1470</x>
+      <y>555</y>
       <w>420</w>
       <h>195</h>
     </coordinates>
@@ -309,16 +223,15 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1005</x>
-      <y>105</y>
+      <x>1065</x>
+      <y>0</y>
       <w>465</w>
       <h>420</h>
     </coordinates>
     <panel_attributes>PersonalBudget
 -
 - userManager : UserManager
-- incomeManager : *IncomeManager
-- expenseManager : *ExpenseManager
+- budgetManager : *BudgetManager
 - INCOME_FILE_NAME : String
 - EXPENSE_FILE_NAME : String
 -

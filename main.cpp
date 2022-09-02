@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     PersonalBudget personalBudget("Users.xml");
 
-    personalBudget.userRegistartion();
+    personalBudget.userRegistration();
     personalBudget.userSignIn();
     return 0;
 }

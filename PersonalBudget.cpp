@@ -1,6 +1,6 @@
 #include "PersonalBudget.h"
 
-void PersonalBudget::userRegistartion() {
+void PersonalBudget::userRegistration() {
     userManager.userRegistration();
 }
 
