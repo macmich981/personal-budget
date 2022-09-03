@@ -54,3 +54,11 @@ bool AuxilaryMethods::isDouble(string &str) {
     }
     return true;
 }
+
+int AuxilaryMethods::convertDateStringToDateAsInt(string date, char delimiter) {
+    if (!DateValidator::validateDate(date, delimiter)) {
+        return -1;
+    }
+    vector<string> splittedDate = split(date, delimiter);
+    return stoi(splittedDate[0] + splittedDate[1] + splittedDate[2]);
+}

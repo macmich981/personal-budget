@@ -5,6 +5,7 @@
 #include <vector>
 #include <sstream>
 #include <algorithm>
+#include "DateValidator.h"
 
 using namespace std;
 
@@ -16,6 +17,7 @@ public:
     static void removeSpaces(string&);
     static void replaceCommaByPoint(string&);
     static bool isDouble(string&);
+    static int convertDateStringToDateAsInt(string, char);
 };
 
 #endif
