@@ -19,8 +19,8 @@ class BudgetManager {
     IncomeFile incomeFile;
 
     Income inputNewIncomeData();
-    int inputIncomeDate();
-    double inputIncomeAmount();
+    int inputDate();
+    double inputAmount();
     void displayIncome(Income);
 
 public:

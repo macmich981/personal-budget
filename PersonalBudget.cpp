@@ -15,7 +15,7 @@ void PersonalBudget::addIncome() {
     if (userManager.isUserLogged()) {
         budgetManager->addIncome();
     } else {
-        cout << "Aby dodac adresata nalezy najpierw sie zalogowac" << endl;
+        cout << "Aby dodac przychod nalezy najpierw sie zalogowac" << endl;
         system("pause");
     }
 }

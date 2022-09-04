@@ -1,6 +1,6 @@
 #include "BudgetManager.h"
 
-int BudgetManager::inputIncomeDate() {
+int BudgetManager::inputDate() {
     string date = "";
 
     while (!DateValidator::validateDate(date = AuxilaryMethods::readLine(), '-')) {
@@ -9,13 +9,13 @@ int BudgetManager::inputIncomeDate() {
     return AuxilaryMethods::convertDateStringToDateAsInt(date, '-');
 }
 
-double BudgetManager::inputIncomeAmount() {
+double BudgetManager::inputAmount() {
     string amount = "";
 
     while (!AuxilaryMethods::isDouble(amount = AuxilaryMethods::readLine())) {
         cout << "Niepoprawne dane. Sprobuj ponownie: ";
     }
-    return round(stod(amount)* 100.0) / 100.0;
+    return round(stod(amount) * 100.0) / 100.0;
 }
 
 Income BudgetManager::inputNewIncomeData() {
@@ -29,12 +29,12 @@ Income BudgetManager::inputNewIncomeData() {
         income.setDate(AuxilaryMethods::convertDateStringToDateAsInt(DateValidator::getSystemCurrentDateAsString(), '-'));
     } else {
         cout << "Podaje date w formacie rrrr-mm-dd (nie wczesniej niz 2000-01-01 i nie pozniej niz ostatni dzien biezacego miesiaca): ";
-        income.setDate(inputIncomeDate());
+        income.setDate(inputDate());
     }
     cout << "Podaj zrodlo przychodu: ";
     income.setItem(AuxilaryMethods::readLine());
     cout << "Podaj wysokosc przychodu: ";
-    income.setAmount(inputIncomeAmount());
+    income.setAmount(inputAmount());
 
     return income;
 }
@@ -68,7 +68,8 @@ void BudgetManager::displayIncomes() {
         cout << "Brak wpisow..." << endl;
         return;
     }
-
+    cout << left << setw(15) << "DATA" << setw(20) << "ZRODLO PRZYCHODU" << setw(20) << right << "KWOTA" << endl;
+    cout << "=======================================================" << endl;
     sort(incomes.begin(), incomes.end());
     for (Income income : incomes) {
         displayIncome(income);
