@@ -10,9 +10,9 @@ bool IncomeFile::saveIncomeToFile(Income income) {
     xml.IntoElem();
     xml.AddElem("incomeId", income.getId());
     xml.AddElem("userId", income.getUserId());
-    xml.AddElem("date", income.getDate());
+    xml.AddElem("date", AuxilaryMethods::convertDateAsIntToDateString(income.getDate(), '-'));
     xml.AddElem("item", income.getItem());
-    xml.AddElem("amount", income.getAmount());
+    xml.AddElem("amount", to_string(income.getAmount()));
     lastIncomeId++;
     return xml.Save(getFileName());
 }
@@ -28,12 +28,13 @@ vector<Income> IncomeFile::loadIncomesFromFile(int loggedUserId) {
 
     while (xml.FindElem("incomeId")) {
         int incomeId = stoi(xml.GetData());
+        lastIncomeId = incomeId;
         xml.FindElem("userId");
         if (loggedUserId == stoi(xml.GetData())) {
             income.setId(incomeId);
             income.setUserId(stoi(xml.GetData()));
             xml.FindElem("date");
-            income.setDate(stoi(xml.GetData()));
+            income.setDate(AuxilaryMethods::convertDateStringToDateAsInt(xml.GetData(), '-'));
             xml.FindElem("item");
             income.setItem(xml.GetData());
             xml.FindElem("amount");
@@ -42,4 +43,8 @@ vector<Income> IncomeFile::loadIncomesFromFile(int loggedUserId) {
         }
     }
     return incomes;
+}
+
+int IncomeFile::getLastIncomeId() {
+    return lastIncomeId;
 }

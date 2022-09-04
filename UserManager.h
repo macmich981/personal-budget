@@ -22,6 +22,8 @@ public:
     }
     void userRegistration();
     void userSignIn();
+    bool isUserLogged();
+    int getLoggedUserId();
 };
 
 #endif

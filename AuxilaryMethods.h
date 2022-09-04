@@ -18,6 +18,8 @@ public:
     static void replaceCommaByPoint(string&);
     static bool isDouble(string&);
     static int convertDateStringToDateAsInt(string, char);
+    static string readLine();
+    static string convertDateAsIntToDateString(int, char);
 };
 
 #endif

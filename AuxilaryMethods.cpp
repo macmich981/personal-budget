@@ -56,9 +56,23 @@ bool AuxilaryMethods::isDouble(string &str) {
 }
 
 int AuxilaryMethods::convertDateStringToDateAsInt(string date, char delimiter) {
-    if (!DateValidator::validateDate(date, delimiter)) {
-        return -1;
-    }
     vector<string> splittedDate = split(date, delimiter);
     return stoi(splittedDate[0] + splittedDate[1] + splittedDate[2]);
+}
+
+string AuxilaryMethods::readLine() {
+    string line;
+
+    getline(cin, line);
+
+    return line;
+}
+
+string AuxilaryMethods::convertDateAsIntToDateString(int date, char delimiter) {
+    string dateString = to_string(date);
+
+    dateString.insert(dateString.size() - 2, 1, delimiter);
+    dateString.insert(dateString.size() - 5, 1, delimiter);
+
+    return dateString;
 }

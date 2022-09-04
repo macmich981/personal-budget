@@ -4,9 +4,11 @@
 using namespace std;
 
 int main() {
-    PersonalBudget personalBudget("Users.xml");
+    PersonalBudget personalBudget("Users.xml", "Incomes.xml");
 
-    personalBudget.userRegistration();
+    //personalBudget.userRegistration();
     personalBudget.userSignIn();
+    personalBudget.addIncome();
+    personalBudget.displayIncomes();
     return 0;
 }

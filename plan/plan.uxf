@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>480</x>
+      <x>420</x>
       <y>555</y>
       <w>225</w>
       <h>165</h>
@@ -21,7 +21,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>750</x>
+      <x>690</x>
       <y>555</y>
       <w>300</w>
       <h>300</h>
@@ -44,7 +44,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>330</x>
+      <x>270</x>
       <y>750</y>
       <w>375</w>
       <h>150</h>
@@ -59,7 +59,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>90</x>
+      <x>30</x>
       <y>1005</y>
       <w>285</w>
       <h>195</h>
@@ -78,7 +78,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1890</x>
+      <x>1830</x>
       <y>1005</y>
       <w>435</w>
       <h>120</h>
@@ -93,7 +93,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>420</x>
+      <x>360</x>
       <y>1005</y>
       <w>285</w>
       <h>195</h>
@@ -112,7 +112,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1410</x>
+      <x>1350</x>
       <y>1005</y>
       <w>450</w>
       <h>120</h>
@@ -127,7 +127,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1740</x>
+      <x>1680</x>
       <y>1245</y>
       <w>255</w>
       <h>135</h>
@@ -143,7 +143,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1785</x>
+      <x>1725</x>
       <y>1110</y>
       <w>45</w>
       <h>165</h>
@@ -154,7 +154,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1950</x>
+      <x>1890</x>
       <y>1110</y>
       <w>45</w>
       <h>165</h>
@@ -165,7 +165,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>825</x>
+      <x>765</x>
       <y>1005</y>
       <w>345</w>
       <h>315</h>
@@ -189,7 +189,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1095</x>
+      <x>1035</x>
       <y>555</y>
       <w>330</w>
       <h>195</h>
@@ -207,7 +207,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1470</x>
+      <x>1410</x>
       <y>555</y>
       <w>420</w>
       <h>195</h>
@@ -223,7 +223,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1065</x>
+      <x>1005</x>
       <y>0</y>
       <w>465</w>
       <h>420</h>

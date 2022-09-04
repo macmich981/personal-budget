@@ -5,12 +5,14 @@
 #include "BudgetFile.h"
 #include "Income.h"
 #include "Markup.h"
+#include "AuxilaryMethods.h"
 
 using namespace std;
 
 class IncomeFile : public BudgetFile {
     int lastIncomeId;
 
+public:
     IncomeFile(string incomeFileName) : BudgetFile(incomeFileName) {
         lastIncomeId = 0;
     }

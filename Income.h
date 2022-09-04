@@ -20,6 +20,7 @@ public:
         this->item = item;
         this->amount = amount;
     }
+    bool operator < (const Income &income) const {return date < income.date;}
 
     void setId(int);
     void setUserId(int);
