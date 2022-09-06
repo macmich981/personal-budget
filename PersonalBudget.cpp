@@ -7,7 +7,7 @@ void PersonalBudget::userRegistration() {
 void PersonalBudget::userSignIn() {
     userManager.userSignIn();
     if (userManager.isUserLogged()) {
-        budgetManager = new BudgetManager(INCOME_FILE_NAME, userManager.getLoggedUserId());
+        budgetManager = new BudgetManager(INCOME_FILE_NAME, EXPENSE_FILE_NAME, userManager.getLoggedUserId());
     }
 }
 
@@ -22,4 +22,17 @@ void PersonalBudget::addIncome() {
 
 void PersonalBudget::displayIncomes() {
     budgetManager->displayIncomes();
+}
+
+void PersonalBudget::addExpense() {
+    if (userManager.isUserLogged()) {
+        budgetManager->addExpense();
+    } else {
+        cout << "Aby dodac przychod nalezy najpierw sie zalogowac" << endl;
+        system("pause");
+    }
+}
+
+void PersonalBudget::displayExpenses() {
+    budgetManager->displayExpenses();
 }
