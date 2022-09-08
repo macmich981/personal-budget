@@ -39,3 +39,20 @@ vector<User> UserFile::loadUsersFromFile() {
     }
     return users;
 }
+
+void UserFile::changeLoggedUserPasswordInFile(string password, int loggedUserId) {
+    CMarkup xml;
+
+    xml.Load(USER_FILE_NAME);
+    xml.FindElem();
+    xml.IntoElem();
+
+    while (xml.FindElem("userId")) {
+        if (stoi(xml.GetData()) == loggedUserId) {
+            xml.FindElem("password");
+            xml.SetData(password);
+            break;
+        }
+    }
+    xml.Save(USER_FILE_NAME);
+}

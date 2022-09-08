@@ -7,24 +7,24 @@ User UserManager::inputNewUserData() {
     user.setId(getNewUserId());
     string name = "";
     cout << "Podaj imie: ";
-    cin >> name;
+    name = AuxilaryMethods::readLine();
     user.setName(name);
 
     string surname = "";
     cout << "Podaj nazwisko: ";
-    cin >> surname;
+    surname = AuxilaryMethods::readLine();
     user.setSurname(surname);
 
     string login = "";
     do {
         cout << "Podaj login: ";
-        cin >> login;
+        login = AuxilaryMethods::readLine();
         user.setLogin(login);
     } while (isLoginExist(user.getLogin()));
 
     string password = "";
     cout << "Podaj haslo: ";
-    cin >> password;
+    password = AuxilaryMethods::readLine();
     user.setPassword(password);
 
     return user;
@@ -62,13 +62,13 @@ void UserManager::userSignIn() {
     string login = "", password = "";
 
     cout << endl << "Podaj login: ";
-    getline(cin, login);
+    login = AuxilaryMethods::readLine();
 
     for (User user : users) {
         if (user.getLogin() == login) {
             for (int attempts = 3; attempts > 0; attempts--) {
                 cout << "Podaj haslo. Pozostalo prob: " << attempts << ": ";
-                getline(cin, password);
+                password = AuxilaryMethods::readLine();
 
                 if (user.getPassword() == password) {
                     loggedUserId = user.getId();
@@ -92,4 +92,24 @@ bool UserManager::isUserLogged() {
 
 int UserManager::getLoggedUserId() {
     return loggedUserId;
+}
+
+void UserManager::changeLoggedUserPassword() {
+    string newPassword = "";
+
+    cout << "Podaj nowe haslo: ";
+    newPassword = AuxilaryMethods::readLine();
+
+    for (User &user : users) {
+        if (user.getId() == loggedUserId) {
+            user.setPassword(newPassword);
+            cout << "Haslo zostalo zmienione." << endl << endl;
+            system("pause");
+        }
+    }
+    userFile.changeLoggedUserPasswordInFile(newPassword, loggedUserId);
+}
+
+void UserManager::userSignOut() {
+    loggedUserId = 0;
 }

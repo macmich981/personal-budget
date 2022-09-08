@@ -5,6 +5,7 @@
 #include <vector>
 #include <sstream>
 #include <algorithm>
+#include <conio.h>
 #include "DateValidator.h"
 
 using namespace std;
@@ -20,6 +21,7 @@ public:
     static int convertDateStringToDateAsInt(string, char);
     static string readLine();
     static string convertDateAsIntToDateString(int, char);
+    static char readChar();
 };
 
 #endif

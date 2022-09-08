@@ -5,6 +5,7 @@
 #include <vector>
 #include "User.h"
 #include "UserFile.h"
+#include "AuxilaryMethods.h"
 
 class UserManager {
     int loggedUserId;
@@ -24,6 +25,8 @@ public:
     void userSignIn();
     bool isUserLogged();
     int getLoggedUserId();
+    void changeLoggedUserPassword();
+    void userSignOut();
 };
 
 #endif

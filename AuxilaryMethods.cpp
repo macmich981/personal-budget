@@ -76,3 +76,11 @@ string AuxilaryMethods::convertDateAsIntToDateString(int date, char delimiter) {
 
     return dateString;
 }
+
+char AuxilaryMethods::readChar() {
+    char ch;
+
+    ch = getch();
+    cout << ch << endl;
+    return ch;
+}

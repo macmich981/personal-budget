@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <vector>
-#include <conio.h>
 #include <iomanip>
 #include <tgmath.h>
 #include "Income.h"
@@ -27,7 +26,12 @@ class BudgetManager {
     int inputDate();
     double inputAmount();
     void displayIncome(Income);
+    void displayIncomes(string, string);
     void displayExpense(Expense);
+    void displayExpenses(string, string);
+    double getIncomesSumForSelectedMonth(string, string);
+    double getExpensesSumForSelectedMonth(string, string);
+    string getPreviousMonthDate(string);
 
 public:
     BudgetManager(string incomeFileName, string expenseFileName, int loggedUserId)
@@ -37,8 +41,9 @@ public:
     }
     void addIncome();
     void addExpense();
-    void displayIncomes();
-    void displayExpenses();
+    void displayBalanceForCurrentMonth();
+    void displayBalanceForPreviousMonth();
+    void displayBalanceForSelectedPeriod();
 };
 
 #endif

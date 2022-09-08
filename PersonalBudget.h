@@ -25,9 +25,12 @@ public:
     void userRegistration();
     void userSignIn();
     void addIncome();
-    void displayIncomes();
     void addExpense();
-    void displayExpenses();
+    void displayBalanceForCurrentMonth();
+    void displayBalanceForPreviousMonth();
+    void displayBalanceForSelectedPeriod();
+    void changeLoggedUserPassword();
+    void userSignOut();
 };
 
 #endif

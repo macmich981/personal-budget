@@ -20,19 +20,55 @@ void PersonalBudget::addIncome() {
     }
 }
 
-void PersonalBudget::displayIncomes() {
-    budgetManager->displayIncomes();
-}
-
 void PersonalBudget::addExpense() {
     if (userManager.isUserLogged()) {
         budgetManager->addExpense();
     } else {
-        cout << "Aby dodac przychod nalezy najpierw sie zalogowac" << endl;
+        cout << "Aby dodac wydatek nalezy najpierw sie zalogowac" << endl;
         system("pause");
     }
 }
 
-void PersonalBudget::displayExpenses() {
-    budgetManager->displayExpenses();
+void PersonalBudget::displayBalanceForCurrentMonth() {
+    if (userManager.isUserLogged()) {
+        budgetManager->displayBalanceForCurrentMonth();
+    } else {
+        cout << "Aby wyswietlic bilans nalezy najpierw sie zalogowac" << endl;
+        system("pause");
+    }
+}
+
+void PersonalBudget::displayBalanceForPreviousMonth() {
+    if (userManager.isUserLogged()) {
+        budgetManager->displayBalanceForPreviousMonth();
+    } else {
+        cout << "Aby wyswietlic bilans nalezy najpierw sie zalogowac" << endl;
+        system("pause");
+    }
+}
+
+void PersonalBudget::displayBalanceForSelectedPeriod() {
+    if (userManager.isUserLogged()) {
+        budgetManager->displayBalanceForSelectedPeriod();
+    } else {
+        cout << "Aby wyswietlic bilans nalezy najpierw sie zalogowac" << endl;
+        system("pause");
+    }
+}
+
+void PersonalBudget::changeLoggedUserPassword() {
+    if (userManager.isUserLogged()) {
+        userManager.changeLoggedUserPassword();
+    } else {
+        cout << "Aby zmienic haslo nalezy najpierw sie zalogowac" << endl;
+        system("pause");
+    }
+}
+
+void PersonalBudget::userSignOut() {
+    userManager.userSignOut();
+    delete budgetManager;
+    budgetManager = NULL;
+    cout << "Wylogowano" << endl;
+    system("pause");
 }

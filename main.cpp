@@ -9,8 +9,10 @@ int main() {
     //personalBudget.userRegistration();
     personalBudget.userSignIn();
     //personalBudget.addIncome();
-    personalBudget.addExpense();
-    personalBudget.displayIncomes();
-    personalBudget.displayExpenses();
+    //personalBudget.addExpense();
+    //personalBudget.displayBalanceForCurrentMonth();
+    //personalBudget.displayBalanceForPreviousMonth();
+    //personalBudget.displayBalanceForSelectedPeriod();
+    personalBudget.changeLoggedUserPassword();
     return 0;
 }
