@@ -72,3 +72,7 @@ void PersonalBudget::userSignOut() {
     cout << "Wylogowano" << endl;
     system("pause");
 }
+
+bool PersonalBudget::isUserLogged() {
+    return userManager.isUserLogged();
+}

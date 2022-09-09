@@ -121,6 +121,7 @@ void BudgetManager::addExpense() {
     } else {
         cout << "Blad zapisu do pliku" << endl;
     }
+    system("pause");
 }
 
 void BudgetManager::displayExpense(Expense expense) {
@@ -265,21 +266,27 @@ void BudgetManager::displayBalanceForSelectedPeriod() {
 
     cout << endl;
     sort(incomes.begin(), incomes.end());
-    cout << ">>> Twoje przychody za wybrany okres <<< " << endl;
+    cout << ">>> Twoje przychody za wybrany okres <<< " << endl << endl;
     for (Income income : incomes) {
         if (income.getDate() >= dateFrom && income.getDate() <= dateTo) {
             incomeSum += income.getAmount();
             displayIncome(income);
         }
     }
+    if (!incomeSum) {
+        cout << "Brak wpisow za dany miesiac..." << endl;
+    }
     cout << endl;
     sort(expenses.begin(), expenses.end());
-    cout << ">>> Twoje wydatki za wybrany okres <<< " << endl;
+    cout << ">>> Twoje wydatki za wybrany okres <<< " << endl << endl;
     for (Expense expense : expenses) {
         if (expense.getDate() >= dateFrom && expense.getDate() <= dateTo) {
             expenseSum += expense.getAmount();
             displayExpense(expense);
         }
+    }
+    if (!expenseSum) {
+        cout << "Brak wpisow za dany miesiac..." << endl;
     }
     cout << endl;
     cout << "Suma przychodow: " << incomeSum << endl;

@@ -31,6 +31,7 @@ public:
     void displayBalanceForSelectedPeriod();
     void changeLoggedUserPassword();
     void userSignOut();
+    bool isUserLogged();
 };
 
 #endif

@@ -54,7 +54,6 @@ void UserManager::userRegistration() {
     userFile.saveUserToFile(user);
 
     cout << endl << "Konto zalozono pomyslnie" << endl << endl;
-    cin.get();
     system("pause");
 }
 
