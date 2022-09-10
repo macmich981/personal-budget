@@ -260,7 +260,10 @@ void BudgetManager::displayBalanceForSelectedPeriod() {
     cout << "Podaje date poczatkowa w formacie rrrr-mm-dd: ";
     int dateFrom = inputDate();
     cout <<"Podaj date koncowa w formacie rrrr-mm-dd: ";
-    int dateTo = inputDate();
+    int dateTo;
+    while (dateTo = inputDate() < dateFrom) {
+        cout << "Data koncowa musi byc pozniejsza od daty poczatkowej! Sprobuj ponownie: ";
+    }
     double incomeSum = 0;
     double expenseSum = 0;
 
